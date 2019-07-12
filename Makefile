@@ -23,3 +23,12 @@ cluster:
 
 delete:
 	rm -rf */
+
+client:
+	redis-cli -c -p 7001
+
+gitsave:
+	git add .
+	git commit -amupdate
+	git pull --rebase
+	git push origin master
